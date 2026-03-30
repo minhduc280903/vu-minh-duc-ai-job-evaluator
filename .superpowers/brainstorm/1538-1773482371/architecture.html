@@ -1,0 +1,75 @@
+<h2>Job Finder v5 — System Architecture</h2>
+<p class="subtitle">Full-stack redesign: FastAPI + React + Modern Dark UI</p>
+
+<div class="section">
+  <h3>Architecture Overview</h3>
+  <div class="mockup">
+    <div class="mockup-header">System Architecture Diagram</div>
+    <div class="mockup-body" style="padding: 24px; background: #0f172a; font-family: monospace; font-size: 13px; line-height: 1.6; color: #e2e8f0;">
+<pre style="margin:0; white-space:pre; color: #e2e8f0;">
+┌─────────────────────────────────────────────────────────────────┐
+│                    <span style="color:#f59e0b;">REACT FRONTEND</span> (Vite + TailwindCSS)            │
+│  ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌─────────┐ ┌────────┐│
+│  │Dashboard │ │ Jobs     │ │Applications│ │Scrapers │ │Settings││
+│  │ Charts   │ │ Table    │ │  Kanban   │ │ Control │ │Profile ││
+│  │ Stats    │ │ Detail   │ │  Tracking │ │ Monitor │ │ Notif  ││
+│  └─────┬────┘ └────┬─────┘ └─────┬─────┘ └────┬────┘ └───┬────┘│
+│        └───────────┴─────────────┴─────────────┴──────────┘    │
+│                         │ REST API + WebSocket                  │
+└─────────────────────────┼───────────────────────────────────────┘
+                          │
+┌─────────────────────────┼───────────────────────────────────────┐
+│                    <span style="color:#10b981;">FASTAPI BACKEND</span>                             │
+│  ┌──────────────────────┴──────────────────────────────────┐   │
+│  │                   API Router Layer                       │   │
+│  │  /api/jobs  /api/scrapers  /api/eval  /api/apps  /api/ws│   │
+│  └───────┬──────────┬──────────┬──────────┬──────────┬─────┘   │
+│          │          │          │          │          │          │
+│  ┌───────┴────┐ ┌───┴────┐ ┌──┴───┐ ┌───┴────┐ ┌───┴────┐    │
+│  │<span style="color:#60a5fa;">Job Service</span>│ │<span style="color:#60a5fa;">Scraper</span>│ │<span style="color:#60a5fa;">AI    </span>│ │<span style="color:#60a5fa;">App    </span>│ │<span style="color:#60a5fa;">Notif  </span>│    │
+│  │  CRUD     │ │Service │ │Eval  │ │Track  │ │Service │    │
+│  │  Filter   │ │Orchest.│ │Engine│ │Kanban │ │Telegram│    │
+│  │  Search   │ │Queue   │ │Score │ │Notes  │ │Email   │    │
+│  └───────────┘ └────────┘ └──────┘ └───────┘ └────────┘    │
+│          │          │          │                              │
+│  ┌───────┴──────────┴──────────┴────────────────────────┐    │
+│  │              <span style="color:#a78bfa;">APScheduler</span> (Background Tasks)           │    │
+│  │   Auto-scrape │ Auto-evaluate │ Daily Reports         │    │
+│  └──────────────────────────────────────────────────────┘    │
+│          │                                                    │
+│  ┌───────┴──────────────────────────────────────────────┐    │
+│  │              <span style="color:#f472b6;">SQLite + SQLAlchemy</span>                    │    │
+│  │  jobs │ applications │ scraper_runs │ notifications   │    │
+│  └──────────────────────────────────────────────────────┘    │
+│          │                                                    │
+│  ┌───────┴──────────────────────────────────────────────┐    │
+│  │              <span style="color:#fb923c;">Ollama LLM</span> (localhost:11434)            │    │
+│  │              qwen2.5:14b + retry logic                │    │
+│  └──────────────────────────────────────────────────────┘    │
+└──────────────────────────────────────────────────────────────┘
+</pre>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>Key Design Decisions</h3>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+    <div style="background: rgba(255,255,255,0.05); border-radius: 12px; padding: 16px; border: 1px solid rgba(255,255,255,0.1);">
+      <div style="color: #10b981; font-weight: 600; margin-bottom: 8px;">UI: Modern Dark</div>
+      <div style="color: #94a3b8; font-size: 13px;">Slate-900 bg, rounded cards, green/blue/amber tiers. Recharts for analytics. Sidebar navigation.</div>
+    </div>
+    <div style="background: rgba(255,255,255,0.05); border-radius: 12px; padding: 16px; border: 1px solid rgba(255,255,255,0.1);">
+      <div style="color: #60a5fa; font-weight: 600; margin-bottom: 8px;">State: Zustand + React Query</div>
+      <div style="color: #94a3b8; font-size: 13px;">React Query for server state caching. Zustand for UI state. WebSocket for real-time scraper updates.</div>
+    </div>
+    <div style="background: rgba(255,255,255,0.05); border-radius: 12px; padding: 16px; border: 1px solid rgba(255,255,255,0.1);">
+      <div style="color: #a78bfa; font-weight: 600; margin-bottom: 8px;">Scrapers: Refactored Base Class</div>
+      <div style="color: #94a3b8; font-size: 13px;">Abstract BaseScraper with common logic. Each scraper extends it. Retry logic + error recovery built-in.</div>
+    </div>
+    <div style="background: rgba(255,255,255,0.05); border-radius: 12px; padding: 16px; border: 1px solid rgba(255,255,255,0.1);">
+      <div style="color: #f59e0b; font-weight: 600; margin-bottom: 8px;">Scheduler: APScheduler</div>
+      <div style="color: #94a3b8; font-size: 13px;">Configurable cron jobs. Auto-scrape daily, auto-evaluate, daily report via Telegram/Email.</div>
+    </div>
+  </div>
+</div>

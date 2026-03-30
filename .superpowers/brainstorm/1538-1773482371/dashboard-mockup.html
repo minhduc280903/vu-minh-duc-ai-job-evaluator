@@ -1,0 +1,242 @@
+<h2>Dashboard UI — Modern Dark Theme</h2>
+<p class="subtitle">Main dashboard khi mở ứng dụng</p>
+
+<div class="mockup">
+  <div class="mockup-header">Job Finder Dashboard</div>
+  <div class="mockup-body" style="display: flex; min-height: 600px; background: #0f172a; padding: 0;">
+
+    <!-- SIDEBAR -->
+    <div style="width: 220px; background: #0f172a; border-right: 1px solid #1e293b; padding: 20px 0; flex-shrink: 0;">
+      <div style="padding: 0 20px 24px; display: flex; align-items: center; gap: 10px;">
+        <div style="width: 36px; height: 36px; background: linear-gradient(135deg, #10b981, #3b82f6); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 16px;">JF</div>
+        <div>
+          <div style="color: #f8fafc; font-weight: 700; font-size: 15px;">Job Finder</div>
+          <div style="color: #64748b; font-size: 11px;">v5 Pro</div>
+        </div>
+      </div>
+
+      <div style="padding: 0 12px;">
+        <div style="background: #1e293b; border-radius: 8px; padding: 10px 14px; margin-bottom: 4px; display: flex; align-items: center; gap: 10px; cursor: pointer;">
+          <span style="color: #10b981;">📊</span>
+          <span style="color: #f8fafc; font-size: 13px; font-weight: 500;">Dashboard</span>
+        </div>
+        <div style="padding: 10px 14px; margin-bottom: 4px; display: flex; align-items: center; gap: 10px; cursor: pointer;">
+          <span style="color: #64748b;">💼</span>
+          <span style="color: #94a3b8; font-size: 13px;">Jobs</span>
+          <span style="margin-left: auto; background: #10b981; color: white; padding: 1px 6px; border-radius: 10px; font-size: 10px;">7.5k</span>
+        </div>
+        <div style="padding: 10px 14px; margin-bottom: 4px; display: flex; align-items: center; gap: 10px; cursor: pointer;">
+          <span style="color: #64748b;">📋</span>
+          <span style="color: #94a3b8; font-size: 13px;">Applications</span>
+        </div>
+        <div style="padding: 10px 14px; margin-bottom: 4px; display: flex; align-items: center; gap: 10px; cursor: pointer;">
+          <span style="color: #64748b;">🕷️</span>
+          <span style="color: #94a3b8; font-size: 13px;">Scrapers</span>
+          <span style="margin-left: auto; width: 8px; height: 8px; background: #10b981; border-radius: 50%;"></span>
+        </div>
+        <div style="padding: 10px 14px; margin-bottom: 4px; display: flex; align-items: center; gap: 10px; cursor: pointer;">
+          <span style="color: #64748b;">⚙️</span>
+          <span style="color: #94a3b8; font-size: 13px;">Settings</span>
+        </div>
+      </div>
+
+      <div style="position: absolute; bottom: 20px; left: 12px; right: 12px;">
+        <div style="background: #1e293b; border-radius: 10px; padding: 12px; margin: 0 8px;">
+          <div style="color: #64748b; font-size: 10px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px;">Next Auto-Scrape</div>
+          <div style="color: #f8fafc; font-size: 13px; font-weight: 500;">Tomorrow 6:00 AM</div>
+          <div style="color: #10b981; font-size: 11px;">Scheduler Active</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div style="flex: 1; padding: 24px; overflow-y: auto;">
+      <!-- HEADER -->
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+        <div>
+          <div style="color: #f8fafc; font-size: 22px; font-weight: 700;">Dashboard</div>
+          <div style="color: #64748b; font-size: 13px;">Xin chào, Minh Đức! Có <span style="color: #10b981;">24 jobs mới</span> hôm nay.</div>
+        </div>
+        <div style="display: flex; gap: 10px;">
+          <button style="background: #1e293b; border: 1px solid #334155; color: #f8fafc; padding: 8px 16px; border-radius: 8px; font-size: 13px; cursor: pointer;">Export Excel</button>
+          <button style="background: linear-gradient(135deg, #10b981, #059669); border: none; color: white; padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer;">🔄 Scrape Now</button>
+        </div>
+      </div>
+
+      <!-- STAT CARDS -->
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 24px;">
+        <div style="background: #1e293b; border-radius: 12px; padding: 18px; border: 1px solid #334155;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <span style="color: #64748b; font-size: 12px;">Total Jobs</span>
+            <span style="color: #10b981; font-size: 11px;">+342 ↑</span>
+          </div>
+          <div style="color: #f8fafc; font-size: 28px; font-weight: 700;">7,500</div>
+          <div style="color: #64748b; font-size: 11px; margin-top: 4px;">Across 6 platforms</div>
+        </div>
+        <div style="background: #1e293b; border-radius: 12px; padding: 18px; border: 1px solid #334155;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <span style="color: #64748b; font-size: 12px;">Tier S Matches</span>
+            <span style="color: #10b981; font-size: 20px;">🏆</span>
+          </div>
+          <div style="color: #10b981; font-size: 28px; font-weight: 700;">42</div>
+          <div style="color: #64748b; font-size: 11px; margin-top: 4px;">Score 75-100</div>
+        </div>
+        <div style="background: #1e293b; border-radius: 12px; padding: 18px; border: 1px solid #334155;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <span style="color: #64748b; font-size: 12px;">Applied</span>
+            <span style="color: #3b82f6; font-size: 20px;">📤</span>
+          </div>
+          <div style="color: #3b82f6; font-size: 28px; font-weight: 700;">12</div>
+          <div style="color: #64748b; font-size: 11px; margin-top: 4px;">3 interviews scheduled</div>
+        </div>
+        <div style="background: #1e293b; border-radius: 12px; padding: 18px; border: 1px solid #334155;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <span style="color: #64748b; font-size: 12px;">AI Evaluated</span>
+            <span style="color: #a78bfa; font-size: 20px;">🤖</span>
+          </div>
+          <div style="color: #a78bfa; font-size: 28px; font-weight: 700;">629</div>
+          <div style="color: #64748b; font-size: 11px; margin-top: 4px;">qwen2.5:14b model</div>
+        </div>
+      </div>
+
+      <!-- CHARTS ROW -->
+      <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 16px; margin-bottom: 24px;">
+        <!-- Score Distribution Chart -->
+        <div style="background: #1e293b; border-radius: 12px; padding: 18px; border: 1px solid #334155;">
+          <div style="color: #f8fafc; font-size: 14px; font-weight: 600; margin-bottom: 16px;">Score Distribution</div>
+          <div style="display: flex; align-items: flex-end; gap: 3px; height: 120px;">
+            <div style="flex:1; background: #ef4444; border-radius: 4px 4px 0 0; height: 20%;"></div>
+            <div style="flex:1; background: #ef4444; border-radius: 4px 4px 0 0; height: 35%;"></div>
+            <div style="flex:1; background: #f59e0b; border-radius: 4px 4px 0 0; height: 55%;"></div>
+            <div style="flex:1; background: #f59e0b; border-radius: 4px 4px 0 0; height: 100%;"></div>
+            <div style="flex:1; background: #f59e0b; border-radius: 4px 4px 0 0; height: 80%;"></div>
+            <div style="flex:1; background: #3b82f6; border-radius: 4px 4px 0 0; height: 60%;"></div>
+            <div style="flex:1; background: #3b82f6; border-radius: 4px 4px 0 0; height: 45%;"></div>
+            <div style="flex:1; background: #3b82f6; border-radius: 4px 4px 0 0; height: 30%;"></div>
+            <div style="flex:1; background: #10b981; border-radius: 4px 4px 0 0; height: 18%;"></div>
+            <div style="flex:1; background: #10b981; border-radius: 4px 4px 0 0; height: 10%;"></div>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-top: 8px;">
+            <span style="color: #64748b; font-size: 10px;">0</span>
+            <span style="color: #64748b; font-size: 10px;">25</span>
+            <span style="color: #64748b; font-size: 10px;">50</span>
+            <span style="color: #64748b; font-size: 10px;">75</span>
+            <span style="color: #64748b; font-size: 10px;">100</span>
+          </div>
+          <div style="display: flex; gap: 16px; margin-top: 12px;">
+            <span style="color: #ef4444; font-size: 11px;">● Tier C</span>
+            <span style="color: #f59e0b; font-size: 11px;">● Tier B</span>
+            <span style="color: #3b82f6; font-size: 11px;">● Tier A</span>
+            <span style="color: #10b981; font-size: 11px;">● Tier S</span>
+          </div>
+        </div>
+
+        <!-- Platform Distribution -->
+        <div style="background: #1e293b; border-radius: 12px; padding: 18px; border: 1px solid #334155;">
+          <div style="color: #f8fafc; font-size: 14px; font-weight: 600; margin-bottom: 16px;">By Platform</div>
+          <div style="space-y: 8px;">
+            <div style="margin-bottom: 10px;">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                <span style="color: #94a3b8; font-size: 12px;">CareerViet</span>
+                <span style="color: #f8fafc; font-size: 12px;">2,704</span>
+              </div>
+              <div style="background: #334155; border-radius: 4px; height: 6px;">
+                <div style="background: #10b981; border-radius: 4px; height: 100%; width: 36%;"></div>
+              </div>
+            </div>
+            <div style="margin-bottom: 10px;">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                <span style="color: #94a3b8; font-size: 12px;">VietnamWorks</span>
+                <span style="color: #f8fafc; font-size: 12px;">2,350</span>
+              </div>
+              <div style="background: #334155; border-radius: 4px; height: 6px;">
+                <div style="background: #3b82f6; border-radius: 4px; height: 100%; width: 31%;"></div>
+              </div>
+            </div>
+            <div style="margin-bottom: 10px;">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                <span style="color: #94a3b8; font-size: 12px;">ITviec</span>
+                <span style="color: #f8fafc; font-size: 12px;">1,169</span>
+              </div>
+              <div style="background: #334155; border-radius: 4px; height: 6px;">
+                <div style="background: #a78bfa; border-radius: 4px; height: 100%; width: 16%;"></div>
+              </div>
+            </div>
+            <div style="margin-bottom: 10px;">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                <span style="color: #94a3b8; font-size: 12px;">Ybox</span>
+                <span style="color: #f8fafc; font-size: 12px;">788</span>
+              </div>
+              <div style="background: #334155; border-radius: 4px; height: 6px;">
+                <div style="background: #f59e0b; border-radius: 4px; height: 100%; width: 11%;"></div>
+              </div>
+            </div>
+            <div style="margin-bottom: 10px;">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                <span style="color: #94a3b8; font-size: 12px;">Joboko + TopCV</span>
+                <span style="color: #f8fafc; font-size: 12px;">489</span>
+              </div>
+              <div style="background: #334155; border-radius: 4px; height: 6px;">
+                <div style="background: #f472b6; border-radius: 4px; height: 100%; width: 6%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TOP MATCHES TABLE -->
+      <div style="background: #1e293b; border-radius: 12px; padding: 18px; border: 1px solid #334155;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+          <div style="color: #f8fafc; font-size: 14px; font-weight: 600;">Top Matches Today</div>
+          <a style="color: #10b981; font-size: 12px; cursor: pointer;">View All →</a>
+        </div>
+        <table style="width: 100%; border-collapse: collapse; font-size: 13px;">
+          <thead>
+            <tr style="border-bottom: 1px solid #334155;">
+              <th style="text-align: left; padding: 8px; color: #64748b; font-weight: 500;">Tier</th>
+              <th style="text-align: left; padding: 8px; color: #64748b; font-weight: 500;">Title</th>
+              <th style="text-align: left; padding: 8px; color: #64748b; font-weight: 500;">Company</th>
+              <th style="text-align: left; padding: 8px; color: #64748b; font-weight: 500;">Score</th>
+              <th style="text-align: left; padding: 8px; color: #64748b; font-weight: 500;">Salary</th>
+              <th style="text-align: right; padding: 8px; color: #64748b; font-weight: 500;">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid #1e293b;">
+              <td style="padding: 10px 8px;"><span style="background: #10b981; color: white; padding: 2px 8px; border-radius: 6px; font-size: 11px; font-weight: 600;">S</span></td>
+              <td style="padding: 10px 8px; color: #f8fafc;">Credit Risk Analyst</td>
+              <td style="padding: 10px 8px; color: #94a3b8;">Techcombank</td>
+              <td style="padding: 10px 8px; color: #10b981; font-weight: 600;">92</td>
+              <td style="padding: 10px 8px; color: #94a3b8;">15-25M VND</td>
+              <td style="padding: 10px 8px; text-align: right;"><span style="color: #3b82f6; cursor: pointer;">View →</span></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #1e293b;">
+              <td style="padding: 10px 8px;"><span style="background: #10b981; color: white; padding: 2px 8px; border-radius: 6px; font-size: 11px; font-weight: 600;">S</span></td>
+              <td style="padding: 10px 8px; color: #f8fafc;">Financial Data Analyst (Fresher)</td>
+              <td style="padding: 10px 8px; color: #94a3b8;">VPBank</td>
+              <td style="padding: 10px 8px; color: #10b981; font-weight: 600;">88</td>
+              <td style="padding: 10px 8px; color: #94a3b8;">12-18M VND</td>
+              <td style="padding: 10px 8px; text-align: right;"><span style="color: #3b82f6; cursor: pointer;">View →</span></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #1e293b;">
+              <td style="padding: 10px 8px;"><span style="background: #3b82f6; color: white; padding: 2px 8px; border-radius: 6px; font-size: 11px; font-weight: 600;">A</span></td>
+              <td style="padding: 10px 8px; color: #f8fafc;">BI Analyst - Banking</td>
+              <td style="padding: 10px 8px; color: #94a3b8;">MB Bank</td>
+              <td style="padding: 10px 8px; color: #3b82f6; font-weight: 600;">74</td>
+              <td style="padding: 10px 8px; color: #94a3b8;">Thoả thuận</td>
+              <td style="padding: 10px 8px; text-align: right;"><span style="color: #3b82f6; cursor: pointer;">View →</span></td>
+            </tr>
+            <tr>
+              <td style="padding: 10px 8px;"><span style="background: #3b82f6; color: white; padding: 2px 8px; border-radius: 6px; font-size: 11px; font-weight: 600;">A</span></td>
+              <td style="padding: 10px 8px; color: #f8fafc;">AML Analyst (Junior)</td>
+              <td style="padding: 10px 8px; color: #94a3b8;">HSBC Vietnam</td>
+              <td style="padding: 10px 8px; color: #3b82f6; font-weight: 600;">71</td>
+              <td style="padding: 10px 8px; color: #94a3b8;">20-30M VND</td>
+              <td style="padding: 10px 8px; text-align: right;"><span style="color: #3b82f6; cursor: pointer;">View →</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,103 @@
+<h2>Dashboard Design Style</h2>
+<p class="subtitle">Chọn phong cách UI bạn thích cho Job Finder Dashboard</p>
+
+<div class="cards">
+  <div class="card" data-choice="modern-dark" onclick="toggleSelect(this)">
+    <div class="card-image" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); padding: 20px; min-height: 200px;">
+      <div style="background: #1e293b; border: 1px solid #334155; border-radius: 12px; padding: 16px; margin-bottom: 12px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+          <span style="color: #f8fafc; font-size: 14px; font-weight: 600;">Job Matches</span>
+          <span style="background: #10b981; color: white; padding: 2px 8px; border-radius: 12px; font-size: 11px;">+24 new</span>
+        </div>
+        <div style="display: flex; gap: 8px; margin-bottom: 8px;">
+          <div style="flex:1; background: #0f172a; border-radius: 8px; padding: 10px; text-align: center;">
+            <div style="color: #10b981; font-size: 20px; font-weight: 700;">42</div>
+            <div style="color: #64748b; font-size: 10px;">Tier S</div>
+          </div>
+          <div style="flex:1; background: #0f172a; border-radius: 8px; padding: 10px; text-align: center;">
+            <div style="color: #3b82f6; font-size: 20px; font-weight: 700;">156</div>
+            <div style="color: #64748b; font-size: 10px;">Tier A</div>
+          </div>
+          <div style="flex:1; background: #0f172a; border-radius: 8px; padding: 10px; text-align: center;">
+            <div style="color: #f59e0b; font-size: 20px; font-weight: 700;">389</div>
+            <div style="color: #64748b; font-size: 10px;">Tier B</div>
+          </div>
+        </div>
+        <div style="background: #0f172a; border-radius: 6px; padding: 8px 12px; display: flex; justify-content: space-between; align-items: center;">
+          <span style="color: #94a3b8; font-size: 11px;">Credit Risk Analyst - Techcombank</span>
+          <span style="color: #10b981; font-size: 12px; font-weight: 600;">Score: 92</span>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Modern Dark</h3>
+      <p>Dark theme, gradients, rounded corners. Professional & tech-forward. Dễ đọc lâu.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="clean-light" onclick="toggleSelect(this)">
+    <div class="card-image" style="background: #f8fafc; padding: 20px; min-height: 200px;">
+      <div style="background: white; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.08);">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+          <span style="color: #1e293b; font-size: 14px; font-weight: 600;">Job Matches</span>
+          <span style="background: #dcfce7; color: #16a34a; padding: 2px 8px; border-radius: 12px; font-size: 11px;">+24 new</span>
+        </div>
+        <div style="display: flex; gap: 8px; margin-bottom: 8px;">
+          <div style="flex:1; background: #f0fdf4; border-radius: 8px; padding: 10px; text-align: center;">
+            <div style="color: #16a34a; font-size: 20px; font-weight: 700;">42</div>
+            <div style="color: #6b7280; font-size: 10px;">Tier S</div>
+          </div>
+          <div style="flex:1; background: #eff6ff; border-radius: 8px; padding: 10px; text-align: center;">
+            <div style="color: #2563eb; font-size: 20px; font-weight: 700;">156</div>
+            <div style="color: #6b7280; font-size: 10px;">Tier A</div>
+          </div>
+          <div style="flex:1; background: #fffbeb; border-radius: 8px; padding: 10px; text-align: center;">
+            <div style="color: #d97706; font-size: 20px; font-weight: 700;">389</div>
+            <div style="color: #6b7280; font-size: 10px;">Tier B</div>
+          </div>
+        </div>
+        <div style="background: #f8fafc; border-radius: 6px; padding: 8px 12px; display: flex; justify-content: space-between; align-items: center;">
+          <span style="color: #475569; font-size: 11px;">Credit Risk Analyst - Techcombank</span>
+          <span style="color: #16a34a; font-size: 12px; font-weight: 600;">Score: 92</span>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Clean Light</h3>
+      <p>White background, subtle shadows, minimal colors. Clean & professional. Giống LinkedIn/Indeed.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="glassmorphism" onclick="toggleSelect(this)">
+    <div class="card-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; min-height: 200px;">
+      <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); border-radius: 16px; padding: 16px; margin-bottom: 12px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+          <span style="color: white; font-size: 14px; font-weight: 600;">Job Matches</span>
+          <span style="background: rgba(255,255,255,0.2); color: white; padding: 2px 8px; border-radius: 12px; font-size: 11px;">+24 new</span>
+        </div>
+        <div style="display: flex; gap: 8px; margin-bottom: 8px;">
+          <div style="flex:1; background: rgba(255,255,255,0.1); border-radius: 8px; padding: 10px; text-align: center;">
+            <div style="color: #4ade80; font-size: 20px; font-weight: 700;">42</div>
+            <div style="color: rgba(255,255,255,0.6); font-size: 10px;">Tier S</div>
+          </div>
+          <div style="flex:1; background: rgba(255,255,255,0.1); border-radius: 8px; padding: 10px; text-align: center;">
+            <div style="color: #60a5fa; font-size: 20px; font-weight: 700;">156</div>
+            <div style="color: rgba(255,255,255,0.6); font-size: 10px;">Tier A</div>
+          </div>
+          <div style="flex:1; background: rgba(255,255,255,0.1); border-radius: 8px; padding: 10px; text-align: center;">
+            <div style="color: #fbbf24; font-size: 20px; font-weight: 700;">389</div>
+            <div style="color: rgba(255,255,255,0.6); font-size: 10px;">Tier B</div>
+          </div>
+        </div>
+        <div style="background: rgba(255,255,255,0.08); border-radius: 6px; padding: 8px 12px; display: flex; justify-content: space-between; align-items: center;">
+          <span style="color: rgba(255,255,255,0.8); font-size: 11px;">Credit Risk Analyst - Techcombank</span>
+          <span style="color: #4ade80; font-size: 12px; font-weight: 600;">Score: 92</span>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Glassmorphism</h3>
+      <p>Frosted glass effect, gradient backgrounds, modern feel. Nổi bật & unique nhưng có thể khó đọc.</p>
+    </div>
+  </div>
+</div>
